@@ -38,6 +38,8 @@ function Login(model) {
 
 function ClickLoginButton() {
     $(document).delegate("#btnLogin", "click", (e) => {
+        let validForm = $("#frmLogin").valid();
+        if (validForm) {
         // prevent the default form submission when using AJAX submit form
         e.preventDefault();
         $('#username-error').text('');
@@ -70,6 +72,7 @@ function ClickLoginButton() {
                 }
             }
         });
+        }
     });
 }
 
@@ -77,8 +80,11 @@ function PressEnter() {
     $(document).on("keydown", "#frmLogin", function (e) {
         // if key is Enter button
         if (e.keyCode === 13) {
-            e.preventDefault();
-            $("#btnLogin").trigger("click");
+            let validForm = $("#frmLogin").valid();
+            if (validForm) {
+                e.preventDefault();
+                $("#btnLogin").trigger("click");
+            }
         }
     });
 }
