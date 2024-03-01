@@ -32,5 +32,21 @@
         {
             
         }
+
+        public class Characters
+        {
+            /// <summary>
+            /// Non-alphanumeric characters
+            /// </summary>
+            public static readonly List<string> SpecialCharacter = new List<string>()
+            {
+                 "~", "`", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "+", "=", "{", "[", "}", "]", "|", "\\", ":", ";", "\"", "'", "<", ">", ",", ".", "?", "/"
+            };
+
+            public static readonly List<string> EscapeCharacters = new List<string>()
+            {
+                "\\", "\n", "\r", "\t", "\b"
+            };
+        }
     }
 }
