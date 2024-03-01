@@ -1,0 +1,32 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Admin Dashboard Template" name="description" />
+    <meta content="Admin Dashboard Template" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="~/favicon.ico">
+
+    <!-- Bootstrap Css -->
+    <link href="~/css/bootstrap.min.css" asp-append-version="true" rel="stylesheet" />
+    <!-- Icons Css -->
+    <link href="~/css/icons.min.css" asp-append-version="true" rel="stylesheet" />
+    <link href="~/css/login.css" asp-append-version="true" rel="stylesheet" />
+    @RenderSection("styles", required: false)
+
+</head>
+
+<body>
+    @RenderBody()
+
+    <!-- JAVASCRIPT -->
+    <script src="~/js/jquery/jquery.min.js" asp-append-version="true"></script>
+    <script src="~/js/bootstrap/js/bootstrap.bundle.min.js" asp-append-version="true"></script>
+    <script src="~/js/login.js" asp-append-version="true"></script>
+    @RenderSection("scripts", required: false)   
+</body>
+</html>

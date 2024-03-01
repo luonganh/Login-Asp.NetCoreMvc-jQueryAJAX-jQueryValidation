@@ -1,0 +1,12 @@
+﻿global using Asp.NetCore.Infrastructure.Identity.Entities;
+global using Asp.NetCore.Infrastructure.Identity.EntityConfigurations;
+global using Asp.NetCore.Infrastructure.Identity.Enums;
+global using Microsoft.AspNetCore.Identity;
+global using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore.Design;
+global using Microsoft.EntityFrameworkCore.Metadata.Builders;
+global using Microsoft.Extensions.Configuration;
+global using System.ComponentModel.DataAnnotations;
+global using static Asp.NetCore.Shared.Utilities;
+global using Asp.NetCore.Shared;

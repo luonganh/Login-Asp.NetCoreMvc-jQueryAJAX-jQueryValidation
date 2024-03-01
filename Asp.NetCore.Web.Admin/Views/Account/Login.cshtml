@@ -1,0 +1,77 @@
+﻿@{    
+    ViewBag.Title = "Login Page";
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+@section Styles {
+    <style>
+        #password {
+            width: 100%;
+            padding-right: 50px;
+        }
+
+        #password-addon {
+            position: absolute;
+            right: 0;
+            z-index: 100;
+        }
+
+        #frmLogin .red, .error-notification {
+            color: red;
+        }
+    </style>
+}
+
+<div class="account-pages my-5 pt-sm-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6 col-xl-5">
+                <div class="card overflow-hidden">
+                    <div class="bg-primary bg-soft">
+                        <div class="row">
+                            <div class="col-7">
+                                <div class="text-primary p-4">
+                                    <h5 class="text-primary">Welcome Back !</h5>
+                                    <p>Sign in.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body pt-0">
+                        <div class="p-2">
+                            <!-- If HTML form element exist then Asp.Net Core automatically generate a cookie that has name '.AspNetCore.Antiforgery' -->
+                            <form class="form-horizontal" method="post" id="frmLogin">
+                                <div class="input-group-container">
+                                    <label for="username" class="form-label">Username</label>
+                                    <input type="text" class="form-control" id="username" placeholder="Enter username">
+                                </div>
+                                <div class="input-group-container">
+                                    <label class="form-label">Password</label>
+                                    <div class="input-group auth-pass-inputgroup">
+                                        <input type="password" class="form-control" placeholder="Enter password" aria-label="Password" aria-describedby="password-addon" id="password" name="password">
+                                        <button class="btn btn-light " type="button" id="password-addon"><i class="mdi mdi-eye-outline"></i></button>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="remember-check">
+                                    <label class="form-check-label" for="remember-check">
+                                        Remember me
+                                    </label>
+                                </div>
+                                <div class="mt-2 d-grid">
+                                    <button class="btn btn-primary waves-effect waves-light" id="btnLogin">Log In</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+
+    </script>
+}

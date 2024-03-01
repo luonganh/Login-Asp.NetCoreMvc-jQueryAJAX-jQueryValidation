@@ -1,0 +1,11 @@
+﻿global using Asp.NetCore.Shared.Enums;
+global using OfficeOpenXml;
+global using OfficeOpenXml.Table;
+global using System.Collections;
+global using System.ComponentModel.DataAnnotations;
+global using System.Globalization;
+global using System.Linq.Expressions;
+global using System.Reflection;
+global using System.Security.Cryptography;
+global using System.Text;
+global using System.Text.RegularExpressions;
