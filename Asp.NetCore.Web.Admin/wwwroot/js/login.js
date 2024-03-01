@@ -2,6 +2,7 @@
     ShowHidePassword();
     ClickLoginButton();
     PressEnter();
+    LoginFormValidation();
 });
 
 function ShowHidePassword() {
@@ -79,5 +80,33 @@ function PressEnter() {
             e.preventDefault();
             $("#btnLogin").trigger("click");
         }
+    });
+}
+
+function LoginFormValidation() {
+    $("#frmLogin").validate({
+        errorClass: 'red',
+        ignore: [],
+        lang: 'vi',
+        rules: {
+            username: {
+                required: true,
+                rangelength: [4, 50],               
+            },
+            password: {
+                required: true,
+                rangelength: [6, 30],               
+            }
+        },
+        messages: {
+            username: {
+                required: "Please enter the username",
+                rangelength: "Please enter a value between 4 and 50 characters long",               
+            },
+            password: {
+                required: "Please enter the password",
+                rangelength: "Please enter a value between 6 and 30 characters long",
+            }
+        },        
     });
 }
