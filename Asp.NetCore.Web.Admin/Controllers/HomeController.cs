@@ -11,15 +11,13 @@ namespace Asp.NetCore.Web.Admin.Controllers
 
         public IActionResult Index()
         {
-            var isAuthenticated = false;
-            if (!isAuthenticated)
+            // Check existence of .AspNetCore.Identity.Application cookie
+            var isAuthenticated = HttpContext.User.Identity.IsAuthenticated;
+            if (isAuthenticated)
             {
-                return Redirect("/login");
-                //return RedirectToAction("Login", "Account");                
-                //return LocalRedirect("/Login");
-                //return RedirectToRoute("routeName");
+                return View();
             }
-            return View();
+            return Redirect("/login");           
         }
 
         public IActionResult Privacy()

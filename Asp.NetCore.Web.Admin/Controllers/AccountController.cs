@@ -21,7 +21,13 @@ namespace Asp.NetCore.Web.Admin.Controllers
 
         [HttpGet("/login")]
         public IActionResult Login()
-        {            
+        {
+            // Check existence of .AspNetCore.Identity.Application cookie
+            var isAuthenticated = HttpContext.User.Identity.IsAuthenticated;
+            if (isAuthenticated)
+            {
+                return Redirect("/");
+            }
             return View();
         }
 
