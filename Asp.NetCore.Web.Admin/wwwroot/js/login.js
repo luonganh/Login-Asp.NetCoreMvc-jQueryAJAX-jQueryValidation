@@ -86,26 +86,33 @@ function PressEnter() {
 function LoginFormValidation() {
     $("#frmLogin").validate({
         errorClass: 'red',
-        ignore: [],
-        lang: 'vi',
+        ignore: [],        
         rules: {
             username: {
                 required: true,
-                rangelength: [4, 50],               
+                rangelength: [4, 50],     
+                noWhitespaceAtBeginEnd: true,
+                startWithLetter: true,
+                englishUnderscoresChars: true
             },
             password: {
                 required: true,
-                rangelength: [6, 30],               
+                rangelength: [6, 30],      
+                noWhitespaceAtBeginEnd: true,
+                startWithLetter: true,
+                atLeastOneNumber: true,
+                atLeastOneSpecialChar: true,
+                atLeastOneUpperLetterAndLowerLetter: true
             }
         },
         messages: {
             username: {
-                required: "Please enter the username",
-                rangelength: "Please enter a value between 4 and 50 characters long",               
+                required: "Please enter the username.",
+                rangelength: "Please enter a value between 4 and 50 characters long.",               
             },
             password: {
-                required: "Please enter the password",
-                rangelength: "Please enter a value between 6 and 30 characters long",
+                required: "Please enter the password.",
+                rangelength: "Please enter a value between 6 and 30 characters long.",
             }
         },        
     });
